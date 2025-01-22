@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row">
+    <div class="col-md-6 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Add Directory</h4>
+          {% if messages %}
+          {% for message in messages %}
+           {% if message.tags == 'error' %}
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          {{message}}
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+           </button>
+            </div>
+          {% endif %}
+          {% endfor %}
+          {% endif %}
+             {% if messages %}
+          {% for message in messages %}
+           {% if message.tags == 'success' %}
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          {{message}}
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+           </button>
+            </div>
+          {% endif %}
+          {% endfor %}
+          {% endif %}
+                       
+          <form class="forms-sample"  method="POST" action="">
+            {% csrf_token %}
+
+            <div class="form-group">
+              <label for="exampleInputUsername1">Full Name</label>
+              <input type="text" id="fullname" name="fullname" class="form-control"  required="required" autofocus="autofocus">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Profession</label>
+              <input type="text" id="profession" name="profession" class="form-control"  required="required">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Email</label>
+                <input type="email" id="email" name="email" class="form-control"  required="required">
+              </div>
+            <div class="form-group">
+                <label for="exampleInputConfirmPassword1">Mobile Number</label>
+                <input type="text" id="mobilenumber" name="mobilenumber" maxlength="10" class="form-control"  required="required">
+              </div>
+              <div class="form-group">
+                  <label for="exampleInputConfirmPassword1">City</label>
+                  <input type="text" id="city" name="city" class="form-control"  required="required" autofocus="autofocus">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputConfirmPassword1">Address</label>
+                    <textarea type="text" id="address" rows="4" name="address" class="form-control"  required="required" autofocus="autofocus"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputConfirmPassword1">Status</label>
+                    <select class="form-control"  required="required" name="status">
+                        <option value="">Choose Status</option>
+                        <option value="1">Public</option>
+                        <option value="2">Private</option>
+                    </select>
+                  </div>
+            <button type="submit" class="btn btn-primary mr-2">Add</button>
+         
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    </div>
+
+ {% endblock %}

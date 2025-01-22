@@ -1,0 +1,43 @@
+{% load static %}
+<nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+    <div class="navbar-brand-wrapper d-flex justify-content-center">
+      <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
+        <strong style="color: white;font-size: larger;">Directory Mgmt</strong>
+       
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="typcn typcn-th-menu"></span>
+        </button>
+      </div>
+    </div>
+    <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+      <ul class="navbar-nav mr-lg-2">
+        <li class="nav-item nav-profile dropdown">
+          <a class="nav-link" href="#" data-toggle="dropdown" id="profileDropdown">
+            <img src="/{{user.profile_pic}}"alt="profile"/>
+            <span class="nav-profile-name">{{user.first_name}} {{user.last_name}}</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+            <a class="dropdown-item"  href="{% url 'admin_profile' %}">
+              <i class="typcn typcn-user-add-outline text-primary"></i>
+              Profile
+            </a>
+            <a class="dropdown-item"  href="{% url 'change_password' %}">
+                <i class="typcn typcn-cog-outline text-primary"></i>
+                Setting
+              </a>
+            <a class="dropdown-item" href="{% url 'logout' %}">
+              <i class="typcn typcn-eject text-primary"></i>
+              Logout
+            </a>
+          </div>
+        </li>
+        <li class="nav-item nav-user-status dropdown">
+            <p class="mb-0">{{user.last_login}}.</p>
+        </li>
+      </ul>
+      <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+        <span class="typcn typcn-th-menu"></span>
+      </button>
+    </div>
+  </nav>
+  

@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row">
+    <div class="col-md-4 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <div class="d-flex align-items-center justify-content-between justify-content-md-center justify-content-xl-between flex-wrap mb-4">
+            <div>
+              <p class="mb-2 text-md-center text-lg-left">Total Records</p>
+              <a href="{% url 'all_records' %}"><h1 class="mb-0">{{allrecord}}</h1></a>
+            </div>
+            <i class="typcn typcn-briefcase icon-xl text-secondary"></i>
+          </div>
+       
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <div class="d-flex align-items-center justify-content-between justify-content-md-center justify-content-xl-between flex-wrap mb-4">
+            <div>
+              <p class="mb-2 text-md-center text-lg-left">Total Public Record</p>
+              <a href="{% url 'public_records' %}"><h1 class="mb-0">{{pubrecord}}</h1></a>
+            </div>
+            <i class="typcn typcn-chart-pie icon-xl text-secondary"></i>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <div class="d-flex align-items-center justify-content-between justify-content-md-center justify-content-xl-between flex-wrap mb-4">
+            <div>
+              <p class="mb-2 text-md-center text-lg-left">Total Private Record</p>
+              <a href="{% url 'private_records' %}"><h1 class="mb-0">{{prirecord}}</h1></a>
+            </div>
+            <i class="typcn typcn-clipboard icon-xl text-secondary"></i>
+          </div>
+       
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  {% endblock %}

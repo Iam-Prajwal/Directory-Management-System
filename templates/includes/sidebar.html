@@ -1,0 +1,53 @@
+ <!-- partial:partials/_sidebar.html -->
+ <nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'dashboard' %}">
+          <i class="typcn typcn-device-desktop menu-icon"></i>
+          <span class="menu-title">Dashboard</span>
+          
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+          <i class="typcn typcn-document-text menu-icon"></i>
+          <span class="menu-title">Directory</span>
+          <i class="menu-arrow"></i>
+        </a>
+        <div class="collapse" id="ui-basic">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"> <a class="nav-link" href="{% url 'add_data' %}">Add Directory</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{% url 'manage_data' %}">Manage Directory</a></li>
+           
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+          <i class="typcn typcn-film menu-icon"></i>
+          <span class="menu-title">Directory By Status</span>
+          <i class="menu-arrow"></i>
+        </a>
+        <div class="collapse" id="form-elements">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"><a class="nav-link" href="{% url 'all_records' %}">All Records</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'private_records' %}">Private</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'public_records' %}">Public</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'search_records' %}">
+          <i class="typcn typcn-mortar-board menu-icon"></i>
+          <span class="menu-title">Search</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'records_reports' %}">
+          <i class="typcn typcn-mortar-board menu-icon"></i>
+          <span class="menu-title">Report</span>
+        </a>
+      </li>
+     
+    </ul>
+  </nav>
