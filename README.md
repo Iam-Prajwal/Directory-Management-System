@@ -1,5 +1,4 @@
 ﻿# Directory-Management-System
-# Directory-Management-System
 
 1. Clone This Project "git clone https://github.com/Prajwal726057/Directory-Management-System.git"
 2. Create a virtual environment "python -m venv your_environment_name"
