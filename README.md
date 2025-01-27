@@ -9,4 +9,4 @@
 7. OR change the default database with whatever you want.
 8. Migrate Data into Database "python manage.py makemigrations" and "python manage.py migrate"
 9. Create SuperUser "python manage.py createsuperuser"
-10. Finally Run The Project "python manage.py runserver" 
+10. Finally Run The Project "python manage.py runserver" and BOOOOM!!
